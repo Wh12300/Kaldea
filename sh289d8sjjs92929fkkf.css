@@ -1,0 +1,106 @@
+/* General Styles */
+@font-face {
+  font-family: 'bpg_extrasquare_mtavruli_2009';
+  src: url('bpg_extrasquare_mtavruli_2009.ttf');
+}
+
+body {
+  font-family: 'bpg_extrasquare_mtavruli_2009', sans-serif;
+  background: radial-gradient(circle, #2f3136 0%, #1e2124 100%);
+  color: #fff;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+/* Discord Card Styles */
+.discord-card {
+  background-color: #2f3136;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+  animation: fade-in 0.5s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.card-body {
+  margin-bottom: 20px;
+}
+
+/* Crazy Button Styles */
+.join-btn {
+  display: inline-block;
+  background-color: #7289da;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.join-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: translateX(-100%);
+  transition: all 0.6s ease;
+  z-index: -1;
+}
+
+.join-btn:hover {
+  background-color: #677bc4;
+  box-shadow: 0 0 20px rgba(115, 137, 218, 0.5);
+  transform: translateY(-3px);
+}
+
+.join-btn:hover::before {
+  transform: translateX(100%);
+}
+
+/* Footer Styles */
+footer {
+  background-color: #23272a;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #7f8286;
+}
